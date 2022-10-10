@@ -1,0 +1,72 @@
+<%- include("./partials/header") %>
+
+<body>
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"> Inscription </h1>
+        <form action="/register" method="POST">
+          <div class="form-group mb-2">
+            <label for="nom" class="form-label">Nom</label>
+            <input
+              type="name"
+              id="nom"
+              name="nom"
+              class="form-control"
+              placeholder="Nom"
+              value="<%= typeof nom != 'undefined' ? nom : '' %>"
+            />
+          </div>
+          <div class="form-group mb-2">
+              <label for="prenom" class="form-label">Prénom</label>
+              <input
+                type="name"
+                id="prenom"
+                name="prenom"
+                class="form-control"
+                placeholder="Prénom"
+                value="<%= typeof prenom != 'undefined' ? prenom : '' %>"
+              />
+            </div>
+          <div class="form-group mb-2">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="mdp" class="form-label">Mot de passe</label>
+            <input
+              type="password"
+              id="mdp"
+              name="mdp"
+              class="form-control"
+              placeholder="Mot de passe"
+              value="<%= typeof mdp != 'undefined' ? mdp : '' %>"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="mdp2" class="form-label">Confirmation du mot de passe</label>
+            <input
+              type="password"
+              id="mdp2"
+              name="mdp2"
+              class="form-control"
+              placeholder="Confirmer votre mot de passe"
+              value="<%= typeof mdp2 != 'undefined' ? mdp2 : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Inscription
+          </button>
+        </form>
+        <p class="lead mt-4">Déjà inscrit? <a href="/login">Se connecter</a></p>
+      </div>
+    </div>
+  </div>
+</body>

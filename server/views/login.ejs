@@ -1,0 +1,50 @@
+<%- include("./partials/header") %>
+<body>
+    <div class="container mt-5">
+        <div class="row mt-5">
+            <div class="col-md-6 m-auto">
+              <div class="card card-body">
+                    <h1 class="text-center mb-3"> Connexion </h1>
+                    <form name="Basic" action="/login" method="post" onsubmit="return login()">
+                        <div class="mb-2">
+                            <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Email"
+                            />
+                        </div>
+                        <div class="mb-2">
+                            <input
+                            type="password"
+                            id="mdp"
+                            name="mdp"
+                            class="form-control"
+                            placeholder="Mot de passe"
+                            />
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Connexion
+                        </button>
+                    </form>
+                    <p class="lead mt-4">Pas encore inscrit? <a href="/register">S'inscrire</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        function login() {
+            var x = document.Basic.email.value;
+            if (x == "") {
+                document.getElementById("d1").innerHTML =
+                    "Name must be filled out.";
+                return false;
+                //(optional)by default functions return is true
+                return true;
+            }
+        };
+    </script>
+</body>
